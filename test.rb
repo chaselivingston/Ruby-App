@@ -1,5 +1,6 @@
 require 'sinatra'
+require 'mongo'
 
-get '/' do
-  "Hello, world"
-end
+
+@con = Mongo::Connection.new
+@db = @con['inventory']
