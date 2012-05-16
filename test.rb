@@ -9,7 +9,7 @@ require 'mongo'
 
 3.times.do |i|
 	@coll.insert({'a' => i+1})
-end
+$end
 
 
 puts @coll.find.each {|doc| puts doc.inspect}
